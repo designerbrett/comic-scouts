@@ -11,3 +11,8 @@ ul#hr {
 .clear {
 	clear: both;
 }
+.comic {
+	display: inline-block;
+	vertical-align: top;
+	width: 30%;
+}
