@@ -39,11 +39,11 @@ $('#hr').sheetrock({
 </head>
 <body class="home">
 
-	<ul id="hr"></ul>
-	
 	<header>
 		<h1>Comic Scouts</h1>
 	</header>
+
+	<ul id="hr"></ul>
 	
 	<ul id="hr">
 	  <script id="hr-template" type="text/x-handlebars-template">
@@ -51,6 +51,9 @@ $('#hr').sheetrock({
 	    	<div class="content">
 	    		<p class="number">{{cells.Title}}</p>
 	    		<img src="{{cells.Image}}"/>
+	    		<p class="number">{{cells.Issue}}</p>
+	    		<p class="number">{{cells.Price}}</p>
+	    		<p class="number">{{cells.Username}}</p>
 		    </div>   
 	    </li>
 	  </script>
