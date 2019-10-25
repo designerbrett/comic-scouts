@@ -24,7 +24,7 @@
 $(document).ready(function() {
   
   		// Define spreadsheet URL.
-var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1DrqBR528IhCltGXxA2xYsbYnpbN29QUcCokh5M_g3gk/edit#gid=0';
+var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1DrqBR528IhCltGXxA2xYsbYnpbN29QUcCokh5M_g3gk/';
 
 var HRTemplate = Handlebars.compile($('#hr-template').html());
 
@@ -51,8 +51,8 @@ $('#hr').sheetrock({
 	    	<div class="content">
 	    		<p class="number">{{cells.Title}}</p>
 	    		<img src="{{cells.Image}}"/>
-	    		<p class="number">{{cells.Issue}}</p>
-	    		<p class="number">{{cells.Price}}</p>
+	    		<p class="number">#{{cells.Issue}}</p>
+	    		<p class="number">${{cells.Price}}</p>
 	    		<p class="number">{{cells.Username}}</p>
 		    </div>   
 	    </li>
