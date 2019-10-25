@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Comic Scouts</title>
+
+	<link rel="stylesheet" href="css/reset.min.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	
+	
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+  <!-- Load jQuery and Sheetrock from CDNJS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
+	
+	<!-- Load Handlebars.js from CloudFlare’s CDN. -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  
+  		// Define spreadsheet URL.
+var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1DrqBR528IhCltGXxA2xYsbYnpbN29QUcCokh5M_g3gk/edit#gid=0';
+
+var HRTemplate = Handlebars.compile($('#hr-template').html());
+
+$('#hr').sheetrock({
+  url: mySpreadsheet,
+  rowTemplate: HRTemplate
+}); 
+  
+});
+</script>
+
+</head>
+<body class="home">
+
+	<header>
+		<h1>Comic Scouts</h1>
+	</header>
+
+	<ul id="hr"></ul>
+	
+	<ul id="hr">
+	  <script id="hr-template" type="text/x-handlebars-template">
+	    <li class="comic">
+    		<img src="{{cells.Image}}"/>
+    		<p class="number">{{cells.Title}}</p>
+    		<p class="number">#{{cells.Issue}}</p>
+    		<p class="number">${{cells.Price}}</p>
+    		<p class="number">{{cells.Username}}</p>
+    		<div class="comic-content">
+    			<p class="number">{{cells.Title}}</p>
+    			<p class="number">{{cells.Publisher}}</p>
+    			<p class="number">{{cells.Store}}</p>
+    			<p class="number">{{cells.UserSubmitted}}</p>
+    			<p class="number">{{cells.Timestamp}}</p>
+    		</div>
+	    </li>
+	  </script>
+	</ul>
+
+<nav>
+	<ul>
+		<li><a href="index.html">Dashboard</a></li>
+		<li><a href="stocks.html">Stocks</a></li>
+		<li><a href="dividend.html">Dividends</a></li>
+	</ul>
+</nav>
+
+<footer>
+	<div class="content">
+		<p>Copyright &copy; 2019 Comic Scouts. All Rights Reserved.</p>
+	</div>
+</footer>
+	
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+</html>
