@@ -12,6 +12,31 @@
 		<link rel="stylesheet" type="text/css" href="css/base.css" />
 		<link rel="stylesheet" type="text/css" href="pater/pater.css" />
 		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+		
+				<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+  <!-- Load jQuery and Sheetrock from CDNJS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
+	
+	<!-- Load Handlebars.js from CloudFlare’s CDN. -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+	<script type="text/javascript">
+	$(document).ready(function() {
+	  
+	  		// Define spreadsheet URL.
+	var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1DrqBR528IhCltGXxA2xYsbYnpbN29QUcCokh5M_g3gk/edit#gid=0';
+	
+	var HRTemplate = Handlebars.compile($('#hr-template').html());
+	
+	$('#hr').sheetrock({
+	  url: mySpreadsheet,
+	  rowTemplate: HRTemplate
+	}); 
+	  
+	});
+	</script>
 	</head>
 	<body class="loading">
 		<svg class="hidden">
@@ -40,6 +65,29 @@
 
 			<button class="dummy-menu"><svg class="icon icon--menu"><use xlink:href="#icon-menu"></use></svg></button>
 			<div class="content">
+			
+				<div id="hr" class="grid"></div>
+				
+	
+				<div id="hr">
+				  <script id="hr-template" type="text/x-handlebars-template">
+				    
+				   <div class="grid__item">
+						<div class="product">
+							<div class="product__bg"></div>
+							<img class="product__img" src="{{cells.Image}}" alt="{{cells.Title}}"/>
+							<h2 class="product__title">{{cells.Title}}</h2>
+							<h3 class="product__subtitle">#{{cells.Issue}}</h3>
+							<h4 class="product__subtitle">{{cells.Price}}</h3>
+							<p class="product__description">{{cells.Username}} | {cells.Publisher}} | {{cells.UserSubmitted}} | {{cells.Timestamp}}</p>
+							<div class="product__price">{{cells.Store}}</div>
+						</div>
+					</div>
+				    
+				  </script>
+				</div>
+			
+			
 				<div class="grid">
 					<div class="grid__item">
 						<div class="product">
