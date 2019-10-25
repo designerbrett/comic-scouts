@@ -16,3 +16,9 @@ ul#hr {
 	vertical-align: top;
 	width: 19%;
 }
+.comic-content {
+	display: none;
+}
+.comic .comic-content {
+	display: block;
+}
