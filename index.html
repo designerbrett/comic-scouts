@@ -48,12 +48,14 @@ $('#hr').sheetrock({
 	<ul id="hr">
 	  <script id="hr-template" type="text/x-handlebars-template">
 	    <li style="display: block;">
-	    	<div class="comic">
-	    		<p class="number">{{cells.Title}}</p>
-	    		<img src="{{cells.Image}}"/>
-	    		<p class="number">#{{cells.Issue}}</p>
-	    		<p class="number">${{cells.Price}}</p>
-	    		<p class="number">{{cells.Username}}</p>
+	    	<div class="content">
+	    		<div class="comic">
+		    		<p class="number">{{cells.Title}}</p>
+		    		<img src="{{cells.Image}}"/>
+		    		<p class="number">#{{cells.Issue}}</p>
+		    		<p class="number">${{cells.Price}}</p>
+		    		<p class="number">{{cells.Username}}</p>
+	    		</div>
 		    </div>   
 	    </li>
 	  </script>
