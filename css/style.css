@@ -1,0 +1,13 @@
+body {
+	font-size: 12px;
+	line-height: 1.6rem;
+	color: #333333;
+	background: #F3F3F9;
+}
+ul#hr {
+	margin: 0;
+	padding: 0;
+}
+.clear {
+	clear: both;
+}
