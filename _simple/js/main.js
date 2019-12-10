@@ -55,12 +55,6 @@ jQuery(document).ready(function($){
 		(!window.requestAnimationFrame) ? fixGallery() : window.requestAnimationFrame(fixGallery);
 	});
 
-	function fixGallery() {
-		var offsetTop = $('.cd-main-content').offset().top,
-			scrollTop = $(window).scrollTop();
-		( scrollTop >= offsetTop ) ? $('.cd-main-content').addClass('is-fixed') : $('.cd-main-content').removeClass('is-fixed');
-	}
-
 	/************************************
 		MitItUp filter settings
 		More details: 

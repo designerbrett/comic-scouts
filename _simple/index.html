@@ -30,7 +30,8 @@ var HRTemplate = Handlebars.compile($('#hr-template').html());
 
 $('#hr').sheetrock({
   url: mySpreadsheet,
-  rowTemplate: HRTemplate
+  rowTemplate: HRTemplate,
+  fetchSize: 9
 }); 
   
 });
@@ -40,29 +41,45 @@ $('#hr').sheetrock({
 <body class="home">
 
 	<header>
-		<h1>Comic Scouts</h1>
+		Logo
+		
+		Menu
 	</header>
+	
+	<section class="content">
+		<h1>Welcome to Comic Scouts.</h1>
+		<p>Your top destination to find comics from your local comic shops. Comics are crowdsourced through our web app, you can manage and find more comics by downloading the app on your phone.</p>
+	</section>
 
 	<ul id="hr"></ul>
 	
 	<ul id="hr">
 	  <script id="hr-template" type="text/x-handlebars-template">
 	    <li class="comic">
-    		<img src="{{cells.Image}}"/>
-    		<p class="number">{{cells.Title}}</p>
-    		<p class="number">#{{cells.Issue}}</p>
-    		<p class="number">${{cells.Price}}</p>
-    		<p class="number">{{cells.Username}}</p>
-    		<div class="comic-content">
-    			<p class="number">{{cells.Title}}</p>
-    			<p class="number">{{cells.Publisher}}</p>
-    			<p class="number">{{cells.Store}}</p>
-    			<p class="number">{{cells.UserSubmitted}}</p>
-    			<p class="number">{{cells.Timestamp}}</p>
-    		</div>
+	    	<a href="#comic-display-{{cells.NID}}">
+	    		<img src="{{cells.Image}}"/>
+	    		<p class="number">{{cells.Title}}</p>
+	    		<p class="number">#{{cells.Issue}}</p>
+	    		<p class="number">${{cells.Price}}</p>
+	    		<p class="number">{{cells.Username}}</p>
+    		</a>
+    		
+    		<div id="comic-display-{{cells.NID}}" class="overlay">
+					<div class="popup">
+						<a class="close" href="#">&times;</a>
+						<img src="{{cells.Image}}"/>
+						<p class="number">{{cells.Title}}</p>
+	    			<p class="number">{{cells.Publisher}}</p>
+	    			<p class="number">{{cells.Store}}</p>
+	    			<p class="number">{{cells.UserSubmitted}}</p>
+	    			<p class="number">{{cells.Timestamp}}</p>
+					</div>
+				</div>
 	    </li>
 	  </script>
 	</ul>
+	
+	<p><a href="all.html">View All Comics ></a></p>
 
 <nav>
 	<ul>
@@ -79,5 +96,8 @@ $('#hr').sheetrock({
 </footer>
 	
 <script src="js/main.js"></script> <!-- Resource jQuery -->
+
+
+
 </body>
 </html>
