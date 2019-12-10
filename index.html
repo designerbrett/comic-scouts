@@ -31,7 +31,7 @@ var HRTemplate = Handlebars.compile($('#hr-template').html());
 $('#hr').sheetrock({
   url: mySpreadsheet,
   rowTemplate: HRTemplate,
-  fetchSize: 9
+  fetchSize: 11
 }); 
   
 });
@@ -40,16 +40,27 @@ $('#hr').sheetrock({
 </head>
 <body class="home">
 
-	<header>
-		Logo
-		
-		Menu
-	</header>
+<header>
+<div class="topnav" id="myTopnav">
+	<div class="logo">
+		<a href="/"><img src="home-logo.png"></a>
+	</div>
+  <a href="/" class="active">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+</header>
 	
 	<section class="content">
 		<h1>Welcome to Comic Scouts.</h1>
 		<p>Your top destination to find comics from your local comic shops. Comics are crowdsourced through our web app, you can manage and find more comics by downloading the app on your phone.</p>
 	</section>
+	
+	<h2>Recently Scouted</h2>
 
 	<ul id="hr"></ul>
 	
@@ -58,21 +69,24 @@ $('#hr').sheetrock({
 	    <li class="comic">
 	    	<a href="#comic-display-{{cells.NID}}">
 	    		<img src="{{cells.Image}}"/>
-	    		<p class="number">{{cells.Title}}</p>
-	    		<p class="number">#{{cells.Issue}}</p>
-	    		<p class="number">${{cells.Price}}</p>
-	    		<p class="number">{{cells.Username}}</p>
+	    		<h3 class="title">{{cells.Title}}</h3>
+	    		<p class="publisher">{{cells.Publisher}}</p>
+	    		<p class="issue">#{{cells.Issue}}</p>
+	    		<p class="price">{{cells.Price}}</p>
     		</a>
     		
     		<div id="comic-display-{{cells.NID}}" class="overlay">
 					<div class="popup">
 						<a class="close" href="#">&times;</a>
 						<img src="{{cells.Image}}"/>
-						<p class="number">{{cells.Title}}</p>
-	    			<p class="number">{{cells.Publisher}}</p>
-	    			<p class="number">{{cells.Store}}</p>
-	    			<p class="number">{{cells.UserSubmitted}}</p>
-	    			<p class="number">{{cells.Timestamp}}</p>
+						<h2 class="title">{{cells.Title}}</h2>
+	    			<p class="publisher">{{cells.Publisher}}</p>
+	    			<p class="issue"><span class="label">Issue</span>#{{cells.Issue}}</p>
+						<p class="price"><span class="label">Price</span>{{cells.Price}}</p>
+						<hr>
+	    			<p class="store"><span class="label">Where to find it</span>{{cells.Store}}</p>
+	    			<hr>
+	    			<p class="timestamp"><span class="label">Date Scouted</span>{{cells.Timestamp}}</p>
 					</div>
 				</div>
 	    </li>
