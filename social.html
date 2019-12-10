@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Comic Scouts</title>
+
+	<link rel="stylesheet" href="css/reset.min.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	
+	
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+  <!-- Load jQuery and Sheetrock from CDNJS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
+	
+	<!-- Load Handlebars.js from CloudFlare’s CDN. -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  
+  		// Define spreadsheet URL.
+var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1DrqBR528IhCltGXxA2xYsbYnpbN29QUcCokh5M_g3gk/edit#gid=0';
+
+var HRTemplate = Handlebars.compile($('#hr-template').html());
+
+$('#hr').sheetrock({
+  url: mySpreadsheet,
+  rowTemplate: HRTemplate,
+  fetchSize: 2
+}); 
+  
+});
+</script>
+
+</head>
+<body class="home">
+
+<header>
+<div class="topnav" id="myTopnav">
+	<div class="logo-container">
+		<a class="logo" href="/"><img src="home-logo.png"></a>
+	</div>
+  <a href="all.html">All Comics</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+</header>
+	
+	<section class="social-post">
+		<div class="social-header">
+			<h2>Featured</h2>
+			<h1>Comics Thursday</h1>
+		</div>
+	
+
+	<ul id="hr"></ul>
+	
+	<ul id="hr">
+	  <script id="hr-template" type="text/x-handlebars-template">
+	    <li class="social-comic">
+	    		<img src="{{cells.Image}}"/>
+	    		<p class="price">{{cells.Price}}</p>
+	    		<h3 class="title">{{cells.Title}}</h3>
+	    		<p class="issue">#{{cells.Issue}}</p>
+	    </li>
+	  </script>
+	</ul>
+	
+	<div class="social-footer">
+		<img width="210px" src="home-logo.png"/>
+		<p>comicscouts.com</p>
+	</div>
+	
+	</section>
+	
+
+<footer>
+	<div class="content">
+		<p>Copyright &copy; 2019 Comic Scouts. All Rights Reserved. <a href="terms.html">Terms</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+	</div>
+</footer>
+	
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+
+
+
+</body>
+</html>

@@ -250,3 +250,73 @@ hr {
   max-height: 30%;
   overflow: auto;
 }
+
+
+
+
+
+section.social-post {
+	background-image: linear-gradient(0deg,#394D57 0%,#111520 100%);
+  color: #fff;
+  text-align: center;
+  width: 584px;
+  margin: 100px auto 100px;
+  padding: 24px 28px 33px;
+  font-size: 16px;
+  font-family: "Roboto",sans-serif;
+}
+section.social-post .social-header {
+	margin-bottom: 28px;
+}
+section.social-post h2 {
+	color: #00C0F1;
+  text-transform: uppercase;
+  font-family: "Roboto",sans-serif;
+  font-size: 24px;
+  line-height: 16px;
+}
+section.social-post h1 {
+	color: #A7AAAE;
+	font-family: "Roboto",sans-serif;
+  font-size: 34px;
+  line-height: 40px;
+  margin-bottom: 16px;
+}
+section.social-post .price {
+	min-height: 24px;
+	margin: 0;
+}
+section.social-post .title {
+	min-height: 48px;
+  font-size: 21px;
+  line-height: 24px;
+  margin-bottom: 8px;
+  color: #A7AAAE;
+  margin-top: 0;
+}
+section.social-post .issue {
+	margin: 0;
+}
+section.social-post li.social-comic {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 27%;
+  background: #334E61;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+  border-radius: 4px;
+  padding: 16px;
+}
+.social-footer {
+	margin-top: 28px;
+  font-size: 20px;
+}
+.social-footer p {
+	margin: 0;
+}
+
+
+
+
+
+
