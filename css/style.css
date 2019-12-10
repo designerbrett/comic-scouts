@@ -177,8 +177,9 @@ hr {
 
 
 .overlay {
-  position: absolute;
-  height: 100%;
+  position: fixed;
+  height: 100vh;
+  overflow: scroll;
   top: 0;
   bottom: 0;
   left: 0;
@@ -209,7 +210,12 @@ hr {
 	}
 }
 @media screen and (max-width: 600px) {
-
+	.popup {
+		width: 92%;
+    margin: 0;
+    padding: 12% 4% 4%;
+		border-radius: 0;
+	}
 }
 
 .popup h2 {
@@ -228,13 +234,17 @@ hr {
   top: 16px;
   right: 20px;
   transition: all 200ms;
-  font-size: 30px;
+  font-size: 16px;
   font-weight: bold;
   text-decoration: none;
   color: #333;
 }
+.popup .close span {
+	font-size: 30px;
+	vertical-align: text-bottom;
+}
 .popup .close:hover {
-  color: #06D85F;
+  color: rgb(21, 185, 255);
 }
 .popup .content {
   max-height: 30%;
