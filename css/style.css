@@ -255,7 +255,7 @@ hr {
 
 
 .social-post-page {
-	width: 640px;
+	min-width: 640px;
 	margin: 0 40px;
 }
 section.social-post {
