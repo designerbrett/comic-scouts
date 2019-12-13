@@ -52,6 +52,14 @@ $('#hr').sheetrock({
   </a>
 </div>
 </header>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+  <button class="btn" onclick="filterSelection('animals')"> Animals</button>
+  <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
+  <button class="btn" onclick="filterSelection('colors')"> Colors</button>
+</div>
 	
 	<section class="social-post">
 		<div class="social-header">
@@ -64,7 +72,7 @@ $('#hr').sheetrock({
 	
 	<ul id="hr">
 	  <script id="hr-template" type="text/x-handlebars-template">
-	    <li class="social-comic">
+	    <li class="social-comic filterDiv {{cells.Social Feature}}">
 	    		<img src="{{cells.Image}}"/>
 	    		<p class="price">{{cells.Price}}</p>
 	    		<h3 class="title">{{cells.Title}}</h3>
