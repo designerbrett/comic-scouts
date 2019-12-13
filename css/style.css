@@ -274,6 +274,7 @@ section.social-post h2 {
   font-family: "Roboto",sans-serif;
   font-size: 24px;
   line-height: 16px;
+  margin-bottom: 10px;
 }
 section.social-post h1 {
 	color: #A7AAAE;
@@ -281,6 +282,7 @@ section.social-post h1 {
   font-size: 34px;
   line-height: 40px;
   margin-bottom: 16px;
+  margin-top: 15px;
 }
 section.social-post .price {
 	min-height: 24px;
@@ -299,7 +301,6 @@ section.social-post .issue {
 }
 section.social-post li.social-comic {
   position: relative;
-  display: inline-block;
   vertical-align: top;
   width: 27%;
   background: #334E61;
