@@ -29,8 +29,7 @@ var HRTemplate = Handlebars.compile($('#hr-template').html());
 
 $('#hr').sheetrock({
   url: mySpreadsheet,
-  rowTemplate: HRTemplate,
-  fetchSize: 12
+  rowTemplate: HRTemplate
 }); 
   
 });
