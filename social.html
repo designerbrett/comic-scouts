@@ -30,7 +30,7 @@ var HRTemplate = Handlebars.compile($('#hr-template').html());
 $('#hr').sheetrock({
   url: mySpreadsheet,
   rowTemplate: HRTemplate,
-  fetchSize: 8
+  fetchSize: 12
 }); 
   
 });
@@ -54,9 +54,8 @@ $('#hr').sheetrock({
 </header>
 
 <div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
   <button class="btn" onclick="filterSelection('1')"> Posted</button>
-  <button class="btn" onclick="filterSelection('0')"> No Post</button>
+  <button class="btn active" onclick="filterSelection('0')"> No Post</button>
 </div>
 	
 	<section class="social-post">
