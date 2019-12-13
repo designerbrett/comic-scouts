@@ -255,14 +255,13 @@ hr {
 
 
 .social-post-page {
-	width: 800px;
+	width: 640px;
 	margin: 0 40px;
 }
 section.social-post {
 	background-image: linear-gradient(0deg,#394D57 0%,#111520 100%);
   color: #fff;
   text-align: center;
-  width: 584px;
   margin: 100px auto 100px;
   padding: 24px 28px 33px;
   font-size: 16px;
