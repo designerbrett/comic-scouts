@@ -299,6 +299,10 @@ section.social-post .title {
 section.social-post .issue {
 	margin: 0;
 }
+section.social-post ul#hr {
+	overflow: hidden;
+  height: 364px;
+}
 section.social-post li.social-comic {
   position: relative;
   vertical-align: top;
@@ -307,6 +311,7 @@ section.social-post li.social-comic {
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
   border-radius: 4px;
   padding: 16px;
+  margin-bottom: 10px;
 }
 .social-footer {
 	margin-top: 28px;
