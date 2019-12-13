@@ -299,7 +299,7 @@ section.social-post .title {
 section.social-post .issue {
 	margin: 0;
 }
-section.social-post ul#hr#listing {
+section.social-post ul#hr listing {
 	overflow: hidden;
   height: 364px;
 }
