@@ -316,7 +316,6 @@ section.social-post li.social-comic {
 }
 
 .filterDiv {
-  float: left;
   background-color: #2196F3;
   color: #ffffff;
   width: 100px;
@@ -327,7 +326,7 @@ section.social-post li.social-comic {
 }
 
 .show {
-  display: block;
+  display: inline-block;
 }
 
 
