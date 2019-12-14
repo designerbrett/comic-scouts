@@ -382,6 +382,14 @@ input {
 	border: 1px solid #CCC;
 }
 .page-contact textarea {
-	width: 52%;
+	width: 51%;
+	min-height: 100px;
 }
+@media screen and (max-width: 880px) {
+	.page-contact input,
+	.page-contact textarea {
+		width: 100%;
+	}
+}
+
 
