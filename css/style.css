@@ -142,12 +142,12 @@ hr {
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: rgb(21, 165, 229);
   color: black;
 }
 
 .topnav a.active {
-  background-color: #4CAF50;
+  background-color: rgb(21, 165, 229);
   color: white;
 }
 
