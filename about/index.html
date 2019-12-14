@@ -4,23 +4,37 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Comic Scouts - About</title>
+	<title>Comic Scouts | About</title>
 
-	<link rel="stylesheet" href="css/reset.min.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="/css/reset.min.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="/css/style.css"> <!-- Resource style -->
 	
-</head>
-<body class="home">
 
-	<header>
-		Logo
-		
-		Menu
-	</header>
-	
-	<section class="content">
-		<h1>About Comic Scouts</h1>
+  <!-- Load jQuery and Sheetrock from CDNJS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+</head>
+<body class="page-about">
+
+<header>
+<div class="container">
+	<div class="topnav" id="myTopnav">
+		<div class="logo-container">
+			<a class="logo" href="/"><img src="/home-logo.png"></a>
+		</div>
+	  <a href="/all">All Comics</a>
+	  <a href="/about">About</a>
+	  <a href="/contact">Contact</a>
+	  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+	    <i class="fa fa-bars"></i>
+	  </a>
+	</div>
+</div>
+</header>
+	<div class="container">
+	<h1>About Comic Scouts</h1>
 		<h2>Our History</h2>
 		<p>Comic Scouts was started as a means of supporting local comic book shops and finding the comics that you need. Most comic shops don't have the resources to have all of their inventory up on the web. With thousands of comics its a daunting task, so breaking that up into small sprints where visitors can upload a handful of comics at a time can accomplish the same thing.</p>
 
@@ -44,16 +58,16 @@
 				<h3>Stay Connected</h3>
 				<p>Follow us on <a target="_blank" href="https://www.instagram.com/comicscouts/">Instagram</a></p>
 			</li>
-		</ol>
-
-	</section>
+		</ol>	
+	</div>
 
 <footer>
-	<div class="content">
-		<p>Copyright &copy; 2019 Comic Scouts. All Rights Reserved.</p>
+	<div class="container">
+		<p>Copyright &copy; 2019 Comic Scouts. All Rights Reserved. <a href="/terms">Terms</a> | <a href="/privacy-policy">Privacy Policy</a></p>
 	</div>
 </footer>
-
+	
+<script src="/js/main.js"></script> <!-- Resource jQuery -->
 
 </body>
 </html>
