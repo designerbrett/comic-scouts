@@ -8,10 +8,10 @@ body {
 }
 a {
 	text-decoration: none;
-	color: #333;
+	color: rgb(21, 185, 255);
 }
 a:hover {
-	color: rgb(21, 185, 255);
+	color: rgb(21, 165, 229);
 }
 a.button {
 	background: rgb(21, 185, 255);
@@ -30,6 +30,9 @@ ul#hr {
 }
 .clear {
 	clear: both;
+}
+footer a {
+	text-decoration: underline;
 }
 .container {
 	max-width: 1160px;
@@ -143,7 +146,7 @@ hr {
 
 .topnav a:hover {
   background-color: rgb(21, 165, 229);
-  color: black;
+  color: white;
 }
 
 .topnav a.active {
