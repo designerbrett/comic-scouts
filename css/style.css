@@ -14,7 +14,10 @@ a:hover {
 	color: rgb(21, 165, 229);
 }
 a.button,
-button {
+button, 
+input[type=button], 
+input[type=reset], 
+input[type=submit] {
 	background: rgb(21, 185, 255);
 	color: #FFF;
 	font-weight: bold;
@@ -365,8 +368,13 @@ section.social-post li.social-comic {
   display: inline-block;
 }
 
-
-.page-contact {
-	
+input {
+	font-size: 16px;
+  padding: 8px;
+}
+.page-contact input,
+.page-contact textarea {
+	display: block;
+	width: 50%;
 }
 
