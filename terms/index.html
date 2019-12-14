@@ -4,23 +4,37 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Comic Scouts - Terms</title>
+	<title>Comic Scouts | Terms</title>
 
-	<link rel="stylesheet" href="css/reset.min.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="/css/reset.min.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="/css/style.css"> <!-- Resource style -->
 	
-</head>
-<body class="home">
 
-	<header>
-		Logo
-		
-		Menu
-	</header>
-	
-	<section class="content">
-		<h1>ComicScouts Terms of Service</h1>
+  <!-- Load jQuery and Sheetrock from CDNJS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+</head>
+<body class="page-terms">
+
+<header>
+<div class="container">
+	<div class="topnav" id="myTopnav">
+		<div class="logo-container">
+			<a class="logo" href="/"><img src="/home-logo.png"></a>
+		</div>
+	  <a href="/all">All Comics</a>
+	  <a href="/about">About</a>
+	  <a href="/contact">Contact</a>
+	  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+	    <i class="fa fa-bars"></i>
+	  </a>
+	</div>
+</div>
+</header>
+	<div class="container">
+	<h1>ComicScouts Terms of Service</h1>
 <h3>1. Terms</h3>
 <p>By accessing the website at <a href="http://comicscouts.com">http://comicscouts.com</a>, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright and trademark law.</p>
 <h3>2. Use License</h3>
@@ -51,14 +65,15 @@
 <p>ComicScouts may revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.</p>
 <h3>8. Governing Law</h3>
 <p>These terms and conditions are governed by and construed in accordance with the laws of California and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.</p>
-	</section>
+</div>
 
 <footer>
-	<div class="content">
-		<p>Copyright &copy; 2019 Comic Scouts. All Rights Reserved.</p>
+	<div class="container">
+		<p>Copyright &copy; 2019 Comic Scouts. All Rights Reserved. <a href="/terms">Terms</a> | <a href="/privacy-policy">Privacy Policy</a></p>
 	</div>
 </footer>
-
+	
+<script src="/js/main.js"></script> <!-- Resource jQuery -->
 
 </body>
 </html>
