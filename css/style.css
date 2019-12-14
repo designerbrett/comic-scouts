@@ -17,6 +17,12 @@ a.button {
 	background: rgb(21, 185, 255);
 	color: #FFF;
 	font-weight: bold;
+	border-radius: 4px;
+  padding: 16px 24px;
+  display: inline-block;
+}
+a.button:hover {
+	background: rgb(21, 165, 229);
 }
 ul#hr {
 	margin: 0;
