@@ -27,7 +27,11 @@ input[type=submit] {
   font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
   border: none;
 }
-a.button:hover {
+a.button:hover,
+button:hover, 
+input[type=button]:hover, 
+input[type=reset]:hover, 
+input[type=submit]:hover {
 	background: rgb(21, 165, 229);
 }
 ul#hr {
