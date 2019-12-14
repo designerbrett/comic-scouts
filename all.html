@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Comic Scouts | All Comics</title>
+
+	<link rel="stylesheet" href="css/reset.min.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	
+	
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+  <!-- Load jQuery and Sheetrock from CDNJS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
+	
+	<!-- Load Handlebars.js from CloudFlare’s CDN. -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  
+  		// Define spreadsheet URL.
+var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1DrqBR528IhCltGXxA2xYsbYnpbN29QUcCokh5M_g3gk/edit#gid=0';
+
+var HRTemplate = Handlebars.compile($('#hr-template').html());
+
+$('#hr').sheetrock({
+  url: mySpreadsheet,
+  rowTemplate: HRTemplate
+}); 
+  
+});
+</script>
+
+</head>
+<body class="all-comics">
+
+<header>
+<div class="topnav" id="myTopnav">
+	<div class="logo-container">
+		<a class="logo" href="/"><img src="home-logo.png"></a>
+	</div>
+  <a href="all.html">All Comics</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+</header>
+	
+	<section class="content">
+		<h1>All Comics</h1>
+	</section>
+
+	<ul id="hr"></ul>
+	
+	<ul id="hr">
+	  <script id="hr-template" type="text/x-handlebars-template">
+	    <li class="comic">
+	    	<a href="#comic-display-{{cells.NID}}">
+	    		<img src="{{cells.Image}}"/>
+	    		<h3 class="title">{{cells.Title}}</h3>
+	    		<p class="publisher">{{cells.Publisher}}</p>
+	    		<p class="issue">#{{cells.Issue}}</p>
+	    		<p class="price">{{cells.Price}}</p>
+    		</a>
+    		
+    		<div id="comic-display-{{cells.NID}}" class="overlay">
+					<div class="popup">
+						<a class="close" href="#"><p>Close <span>&times;</span></a>
+						<img src="{{cells.Image}}"/>
+						<h2 class="title">{{cells.Title}}</h2>
+	    			<p class="publisher">{{cells.Publisher}}</p>
+	    			<p class="issue"><span class="label">Issue</span>#{{cells.Issue}}</p>
+						<p class="price"><span class="label">Price</span>{{cells.Price}}</p>
+						<hr>
+	    			<p class="store"><span class="label">Where to find it</span>{{cells.Store}}</p>
+	    			<hr>
+	    			<p class="timestamp"><span class="label">Date Scouted</span>{{cells.Timestamp}}</p>
+					</div>
+				</div>
+	    </li>
+	  </script>
+	</ul>
+
+<footer>
+	<div class="content">
+		<p>Copyright &copy; 2019 Comic Scouts. All Rights Reserved. <a href="terms.html">Terms</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+	</div>
+</footer>
+	
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+
+
+
+</body>
+</html>
