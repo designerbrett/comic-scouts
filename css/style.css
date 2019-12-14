@@ -59,6 +59,9 @@ footer a {
 .comic img {
 	border-radius: 6px;
 }
+.comic a {
+	color: #333;
+}
 .comic h3 {
 	margin: 0;
 }
