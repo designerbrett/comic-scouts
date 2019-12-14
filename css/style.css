@@ -31,6 +31,9 @@ ul#hr {
 .clear {
 	clear: both;
 }
+footer {
+	text-align: center;
+}
 footer a {
 	text-decoration: underline;
 }
