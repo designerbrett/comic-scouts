@@ -378,6 +378,13 @@ input {
 	font-size: 16px;
   padding: 8px 2%;
 }
+
+::-webkit-input-placeholder,
+:-ms-input-placeholder,
+::placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
 .page-contact input,
 .page-contact textarea {
 	display: block;
@@ -399,7 +406,7 @@ input {
 }
 
 .all-listing h3 {
-	margin-bottom: 0;
+	margin-bottom: 8px;
 }
 
 
