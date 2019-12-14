@@ -89,10 +89,9 @@ $('#hr').sheetrock({
 	    			<p class="issue"><span class="label">Issue</span>#{{cells.Issue}}</p>
 						<p class="price"><span class="label">Price</span>{{cells.Price}}</p>
 						<hr>
-	    			<p class="store"><span class="label">Where to find it</span>{{cells.Store}}
-		    			<br>
-		    			{{cells.StoreAddress}}
-		    			{{cells.StoreWebsite}}
+	    			<p class="store"><span class="label">Where to find it</span>{{cells.Store}}<br>
+		    			{{cells.StoreAddress}}<br>
+		    			<a target="_blank" href="{{cells.StoreWebsite}}">{{cells.StoreWebsite}} ></a>
 	    			</p>
 	    			<hr>
 	    			<p class="timestamp"><span class="label">Date Scouted</span>{{cells.Timestamp}}</p>
