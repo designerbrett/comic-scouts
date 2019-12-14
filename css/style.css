@@ -13,6 +13,9 @@ a {
 a:hover {
 	color: rgb(21, 185, 255);
 }
+a.button {
+	
+}
 ul#hr {
 	margin: 0;
 	padding: 0;
@@ -124,7 +127,7 @@ hr {
   
 }
 .topnav a.logo {
-	padding: 9px 16px 5px;
+	padding: 9px 0 5px;
 }
 .topnav a.logo:hover {
 	background: none;
