@@ -386,9 +386,11 @@ input {
 	min-height: 100px;
 }
 @media screen and (max-width: 800px) {
-	.page-contact input,
+	.page-contact input {
+		width: 98%;
+	}
 	.page-contact textarea {
-		width: 100%;
+		width: 99%;
 	}
 }
 
