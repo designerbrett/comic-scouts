@@ -6,12 +6,12 @@
 
 	<title>Comic Scouts | All Comics</title>
 
-	<link rel="stylesheet" href="css/reset.min.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="/css/reset.min.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="/css/style.css"> <!-- Resource style -->
 	
 	
-	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<script src="/js/modernizr.js"></script> <!-- Modernizr -->
 
   <!-- Load jQuery and Sheetrock from CDNJS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -37,25 +37,30 @@ $('#hr').sheetrock({
 </script>
 
 </head>
-<body class="all-comics">
+<body class="all-listing">
 
 <header>
-<div class="topnav" id="myTopnav">
-	<div class="logo-container">
-		<a class="logo" href="/"><img src="home-logo.png"></a>
+<div class="container">
+	<div class="topnav" id="myTopnav">
+		<div class="logo-container">
+			<a class="logo" href="/"><img src="/home-logo.png"></a>
+		</div>
+	  <a href="/all">All Comics</a>
+	  <a href="/about">About</a>
+	  <a href="/contact">Contact</a>
+	  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+	    <i class="fa fa-bars"></i>
+	  </a>
 	</div>
-  <a href="all.html">All Comics</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
 </div>
 </header>
-	
-	<section class="content">
+	<div class="container">
+	<section class="intro-content">
 		<h1>All Comics</h1>
+		
 	</section>
+	
+	<hr>
 
 	<ul id="hr"></ul>
 	
@@ -73,13 +78,16 @@ $('#hr').sheetrock({
     		<div id="comic-display-{{cells.NID}}" class="overlay">
 					<div class="popup">
 						<a class="close" href="#"><p>Close <span>&times;</span></a>
-						<div class="image"><img src="{{cells.Image}}"/></div>
+						<img src="{{cells.Image}}"/>
 						<h2 class="title">{{cells.Title}}</h2>
 	    			<p class="publisher">{{cells.Publisher}}</p>
 	    			<p class="issue"><span class="label">Issue</span>#{{cells.Issue}}</p>
 						<p class="price"><span class="label">Price</span>{{cells.Price}}</p>
 						<hr>
-	    			<p class="store"><span class="label">Where to find it</span>{{cells.Store}}</p>
+	    			<p class="store"><span class="label">Where to find it</span><strong>{{cells.Store}}</strong><br>
+		    			{{cells.StoreAddress}}<br>
+		    			<a target="_blank" href="{{cells.StoreWebsite}}">{{cells.StoreWebsite}} ></a>
+	    			</p>
 	    			<hr>
 	    			<p class="timestamp"><span class="label">Date Scouted</span>{{cells.Timestamp}}</p>
 					</div>
@@ -87,16 +95,17 @@ $('#hr').sheetrock({
 	    </li>
 	  </script>
 	</ul>
+	
+	<p style="text-align: center;"><a class="button" href="/all">View All Comics ></a></p>
+	</div>
 
 <footer>
-	<div class="content">
-		<p>Copyright &copy; 2019 Comic Scouts. All Rights Reserved. <a href="terms.html">Terms</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+	<div class="container">
+		<p>Copyright &copy; 2019 Comic Scouts. All Rights Reserved. <a href="/terms">Terms</a> | <a href="/privacy-policy">Privacy Policy</a></p>
 	</div>
 </footer>
 	
-<script src="js/main.js"></script> <!-- Resource jQuery -->
-
-
+<script src="/js/main.js"></script> <!-- Resource jQuery -->
 
 </body>
 </html>
