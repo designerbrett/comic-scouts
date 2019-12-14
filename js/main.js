@@ -8,7 +8,7 @@ function myFunction() {
   }
 }
 
-// Filters
+// Button Filters
 filterSelection("all")
 function filterSelection(c) {
   var x, i;
