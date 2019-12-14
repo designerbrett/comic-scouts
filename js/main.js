@@ -257,7 +257,7 @@ for (var i = 0; i < btns.length; i++) {
 
 
 // All Search Filtering
-function myFunction() {
+function searchFunction() {
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
