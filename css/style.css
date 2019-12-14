@@ -24,6 +24,8 @@ input[type=submit] {
 	border-radius: 4px;
   padding: 16px 24px;
   display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  border: none;
 }
 a.button:hover {
 	background: rgb(21, 165, 229);
