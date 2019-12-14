@@ -39,6 +39,11 @@ footer a {
 	padding: 0 20px;
 	margin: 0 auto;
 }
+.intro-content {
+	max-width: 650px;
+	margin: 0 auto;
+	text-align: center;
+}
 .comic {
 	display: inline-block;
 	vertical-align: top;
