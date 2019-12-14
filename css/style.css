@@ -377,11 +377,6 @@ section.social-post li.social-comic {
 input {
 	font-size: 16px;
   padding: 8px 2%;
-}
-
-::-webkit-input-placeholder,
-:-ms-input-placeholder,
-::placeholder {
   font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
 }
 
