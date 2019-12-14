@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Comic Scouts</title>
+	<title>Comic Scouts | Home</title>
 
 	<link rel="stylesheet" href="css/reset.min.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -41,19 +41,21 @@ $('#hr').sheetrock({
 <body class="home">
 
 <header>
-<div class="topnav" id="myTopnav">
-	<div class="logo-container">
-		<a class="logo" href="/"><img src="home-logo.png"></a>
+<div class="container">
+	<div class="topnav" id="myTopnav">
+		<div class="logo-container">
+			<a class="logo" href="/"><img src="home-logo.png"></a>
+		</div>
+	  <a href="all.html">All Comics</a>
+	  <a href="about.html">About</a>
+	  <a href="contact.html">Contact</a>
+	  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+	    <i class="fa fa-bars"></i>
+	  </a>
 	</div>
-  <a href="all.html">All Comics</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
 </div>
 </header>
-	
+	<div class="container">
 	<section class="content">
 		<h1>Welcome to Comic Scouts.</h1>
 		<p>Your top destination to find comics from your local comic shops. Comics are crowdsourced through our web app, you can manage and find more comics by downloading the app on your phone.</p>
@@ -94,9 +96,10 @@ $('#hr').sheetrock({
 	</ul>
 	
 	<p><a href="all.html">View All Comics ></a></p>
+	</div>
 
 <footer>
-	<div class="content">
+	<div class="container">
 		<p>Copyright &copy; 2019 Comic Scouts. All Rights Reserved. <a href="terms.html">Terms</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
 	</div>
 </footer>
