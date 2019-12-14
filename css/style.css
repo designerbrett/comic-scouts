@@ -13,7 +13,8 @@ a {
 a:hover {
 	color: rgb(21, 165, 229);
 }
-a.button {
+a.button,
+button {
 	background: rgb(21, 185, 255);
 	color: #FFF;
 	font-weight: bold;
@@ -33,6 +34,7 @@ ul#hr {
 }
 footer {
 	text-align: center;
+	border-top: 1px solid #CCC;
 }
 footer a {
 	text-decoration: underline;
@@ -88,7 +90,6 @@ footer a {
 	width: 49%;
 	text-align: right;
 }
-
 
 
 header {
@@ -355,14 +356,17 @@ section.social-post li.social-comic {
 	margin: 0;
 }
 
+
+
 .filterDiv {
   display: none;
 }
-
 .show {
   display: inline-block;
 }
 
 
-
+.page-contact {
+	
+}
 
