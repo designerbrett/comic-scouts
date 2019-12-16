@@ -34,12 +34,6 @@ $('#hr').sheetrock({
   url: mySpreadsheet,
   rowTemplate: HRTemplate
 }); 
-
-$(".lazy").lazy({
-        effect: "fadeIn",
-        effectTime: 5000,
-        threshold: 0
-    });
   
 });
 </script>
@@ -79,7 +73,7 @@ $(".lazy").lazy({
 	  <script id="hr-template" type="text/x-handlebars-template">
 	    <li class="comic">
 	    	<a href="#comic-display-{{cells.NID}}">
-	    		<img class="lazyload" data-src="{{cells.Image}}" alt="Cover of {{cells.Publisher}}, {{cells.Title}} issue number {{cells.Issue}}" />
+	    		<img class="lazyload" src="{{cells.Image}}" alt="Cover of {{cells.Publisher}}, {{cells.Title}} issue number {{cells.Issue}}" />
 	    		<h3 class="title">{{cells.Title}}</h3>
 	    		<p class="publisher">{{cells.Publisher}}</p>
 	    		<p class="issue">#{{cells.Issue}}</p>
@@ -89,7 +83,7 @@ $(".lazy").lazy({
     		<div id="comic-display-{{cells.NID}}" class="overlay">
 					<div class="popup">
 						<a class="close" href="#"><p>Close <span>&times;</span></a>
-						<img class="lazyload" data-original="{{cells.Image}}" src="/images/cover-loading.png" alt="Cover of {{cells.Publisher}}, {{cells.Title}} issue number {{cells.Issue}}" />
+						<img class="lazyload" src="{{cells.Image}}" alt="Cover of {{cells.Publisher}}, {{cells.Title}} issue number {{cells.Issue}}" />
 						<h2 class="title">{{cells.Title}}</h2>
 	    			<p class="publisher">{{cells.Publisher}}</p>
 	    			<p class="issue"><span class="label">Issue</span>#{{cells.Issue}}</p>
@@ -116,15 +110,6 @@ $(".lazy").lazy({
 </footer>
 	
 <script src="/js/main.js"></script> <!-- Resource jQuery -->
-
-<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
-
-<script type="text/javascript" charset="utf-8">
-window.addEventListener("load", function(event) {
-    console.log("LOAD!");
-    lazyload();
-});
-</script>
 
 <script async src="https://epnt.ebay.com/static/epn-smart-tools.js"></script>
 
