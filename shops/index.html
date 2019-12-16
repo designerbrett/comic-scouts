@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Comic Scouts | Shops</title>
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<link rel="stylesheet" href="/css/reset.min.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/style.css"> <!-- Resource style -->
+	
+	
+	<script src="/js/modernizr.js"></script> <!-- Modernizr -->
+
+  <!-- Load jQuery and Sheetrock from CDNJS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
+	
+	<!-- Load Handlebars.js from CloudFlare’s CDN. -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Define spreadsheet URL.
+	var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1DrqBR528IhCltGXxA2xYsbYnpbN29QUcCokh5M_g3gk/edit#gid=0';
+	
+	var HRTemplate = Handlebars.compile($('#hr-template').html());
+	
+	$('#hr').sheetrock({
+	  url: mySpreadsheet,
+	  rowTemplate: HRTemplate
+	}); 
+});
+</script>
+
+</head>
+<body class="shops">
+
+<header>
+<div class="container">
+	<div class="topnav" id="myTopnav">
+		<div class="logo-container">
+			<a class="logo" href="/"><img src="/home-logo.png"></a>
+		</div>
+	  <a class="active" href="/all">All Comics</a>
+	  <a href="/about">About</a>
+	  <a href="/contact">Contact</a>
+	  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+	    <i class="fa fa-bars"></i>
+	  </a>
+	</div>
+</div>
+</header>
+	<div class="container">
+	<section class="intro-content">
+		<h1>Shops</h1>
+		
+	</section>
+
+	<ul id="hr"></ul>
+	
+	<ul id="hr">
+	  <script id="hr-template" type="text/x-handlebars-template">
+	    <li class="comic">
+    		<h3 class="title">{{cells.Name}}</h3>
+    		<p class="publisher">{{cells.Address}}</p>
+    		<p class="issue">#{{cells.Website}}</p>
+				</div>
+	    </li>
+	  </script>
+	</ul>
+	
+	</div>
+
+<footer>
+	<div class="container">
+		<p>Copyright &copy; 2019 Comic Scouts. All Rights Reserved. <a href="/terms">Terms</a> | <a href="/privacy-policy">Privacy Policy</a></p>
+	</div>
+</footer>
+	
+<script src="/js/main.js"></script> <!-- Resource jQuery -->
+
+<script async src="https://epnt.ebay.com/static/epn-smart-tools.js"></script>
+
+</body>
+</html>
