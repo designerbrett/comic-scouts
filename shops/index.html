@@ -45,7 +45,8 @@ $(document).ready(function() {
 		<div class="logo-container">
 			<a class="logo" href="/"><img src="/home-logo.png"></a>
 		</div>
-	  <a class="active" href="/all">All Comics</a>
+	  <a href="/all">All Comics</a>
+	  <a class="active" href="/shops">Shops</a>
 	  <a href="/about">About</a>
 	  <a href="/contact">Contact</a>
 	  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -67,7 +68,7 @@ $(document).ready(function() {
 	    <li class="comic">
     		<h3 class="title">{{cells.Name}}</h3>
     		<p class="publisher">{{cells.Address}}</p>
-    		<p class="issue">#{{cells.Website}}</p>
+    		<p class="issue">{{cells.Website}}</p>
 				</div>
 	    </li>
 	  </script>
