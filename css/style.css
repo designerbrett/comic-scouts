@@ -408,3 +408,7 @@ input {
 }
 
 
+.stores .comic:nth-child(1) {
+	display: none;
+}
+
