@@ -34,6 +34,12 @@ $('#hr').sheetrock({
   url: mySpreadsheet,
   rowTemplate: HRTemplate
 }); 
+
+$(".lazy").lazy({
+        effect: "fadeIn",
+        effectTime: 5000,
+        threshold: 0
+    });
   
 });
 </script>
@@ -112,13 +118,6 @@ $('#hr').sheetrock({
 <script src="/js/main.js"></script> <!-- Resource jQuery -->
 
 <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
-
-<script type="text/javascript" charset="utf-8">
-window.addEventListener("load", function(event) {
-    console.log("LOAD!");
-    lazyload();
-});
-</script>
 
 <script async src="https://epnt.ebay.com/static/epn-smart-tools.js"></script>
 
