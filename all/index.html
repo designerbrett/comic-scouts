@@ -75,7 +75,7 @@ $('#hr').sheetrock({
 	  <script id="hr-template" type="text/x-handlebars-template">
 	    <li class="comic">
 	    	<a href="#comic-display-{{cells.NID}}">
-	    		<img class="lazyload" data-src="{{cells.Image}}" />
+	    		<img class="lazyload" data-src="{{cells.Image}}" alt="Cover of {{cells.Publisher}}, {{cells.Title}} issue number {{cells.Issue}}" />
 	    		<h3 class="title">{{cells.Title}}</h3>
 	    		<p class="publisher">{{cells.Publisher}}</p>
 	    		<p class="issue">#{{cells.Issue}}</p>
@@ -85,7 +85,7 @@ $('#hr').sheetrock({
     		<div id="comic-display-{{cells.NID}}" class="overlay">
 					<div class="popup">
 						<a class="close" href="#"><p>Close <span>&times;</span></a>
-						<img class="lazyload" data-src="{{cells.Image}}" />
+						<img class="lazyload" data-src="{{cells.Image}}" alt="Cover of {{cells.Publisher}}, {{cells.Title}} issue number {{cells.Issue}}" />
 						<h2 class="title">{{cells.Title}}</h2>
 	    			<p class="publisher">{{cells.Publisher}}</p>
 	    			<p class="issue"><span class="label">Issue</span>#{{cells.Issue}}</p>
@@ -112,6 +112,7 @@ $('#hr').sheetrock({
 </footer>
 	
 <script src="/js/main.js"></script> <!-- Resource jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
 
 </body>
