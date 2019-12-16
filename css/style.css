@@ -408,7 +408,7 @@ input {
 }
 
 
-.stops .comic:nth-child(1) {
-	display: none !important;
+.shops .comic:nth-child(1) {
+	display: none;
 }
 
