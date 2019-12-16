@@ -409,6 +409,6 @@ input {
 
 
 .stops .comic:nth-child(1) {
-	display: none;
+	display: none !important;
 }
 
