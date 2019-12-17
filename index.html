@@ -42,6 +42,7 @@ var HRTemplate = Handlebars.compile($('#hr-template').html());
 $('#hr').sheetrock({
   url: mySpreadsheet,
   rowTemplate: HRTemplate,
+  query: "order by G asce",
   fetchSize: 11
 }); 
   
